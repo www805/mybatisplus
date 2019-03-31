@@ -80,4 +80,36 @@ public class MybatisplusApplicationTests {
 
     }
 
+    /***
+     * @TableName() 表名
+     *   value  指定名称
+     * @TableId() 主键
+     *   type   枚举 IdType.AUTO
+     *   value  指定名称
+     * @TableField() 成员字段
+     *   exist  是否存在
+     *   value  指定名称
+     *
+     *
+     *
+     * 以上都可以在全局配置xml中配置
+     *
+     *
+     * curd
+     * 插入数据库
+     * insert() 方法在插入时，会根据实体类的每个属性进行非空判断，只有非空的属性对应的字段才会出现到sql语句中
+     * insertAllColumn() 方法在插入时，不管属性是否为空，属性所对应的字段搜会出现到sql语句中
+     *
+     * updateById() 更新的时候会做非空判断
+     * updateAllColumnById() 更新的时候不做非空判断，会把全部字段修改
+     *
+     * selectById()  根据id查询数据
+     * selectOne()   根据条件构造器查询数据
+     * selectBatchIds()  根据集合批量查询
+     * selectByMap()  根据字段名，值去查询（key要写成数据库的字段）
+     * selectPath()   分页 new Path()
+     *
+     *
+     */
+
 }
